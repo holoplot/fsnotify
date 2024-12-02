@@ -658,7 +658,7 @@ func supportsFilter(t *testing.T) {
 	case "linux":
 		// Run test.
 	default:
-		t.Skip("withOps() not yet supported on " + runtime.GOOS)
+		t.Skip("WithOps() not yet supported on " + runtime.GOOS)
 	}
 }
 
@@ -904,7 +904,7 @@ loop:
 			}
 			do = append(do, func() {
 				p := tmppath(tmp, c.args[0])
-				err := w.w.AddWith(p, withOps(op), follow)
+				err := w.w.AddWith(p, WithOps(op), follow)
 				if err != nil {
 					t.Fatalf("line %d: addWatch(%q): %s", c.line+1, p, err)
 				}

@@ -440,7 +440,7 @@ func (w *fen) associateFile(path string, stat os.FileInfo, follow bool) error {
 		// is explicitly watched.
 		events |= unix.FILE_NOFOLLOW
 	}
-	if true { // TODO: implement withOps()
+	if true { // TODO: implement WithOps()
 		events |= unix.FILE_MODIFIED
 	}
 	if true {
